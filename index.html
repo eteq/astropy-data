@@ -48,7 +48,8 @@ title: Astropy Data Server
   <ul>
    {% for s in site.static_files %}
       {% assign firstdir = s.path |remove_first: "/" | split: "/" | first%}
-      {% if (firstdir == 'js') or (firstdir == 'css') or (firstdir == 'images') or (firstdir == 'pages-build-version') or (s.path contains 'README.md') %}
+      {% assign filename = s.path |remove_first: "/" | split: "/" | last%}
+      {% if (firstdir == 'js') or (firstdir == 'css') or (firstdir == 'images') or (firstdir == 'pages-build-version') or (s.path contains 'README.md') or (filename|first == '_') %}
       {% else %}
       <li><a href="{{ s.path |remove_first: "/" }}">{{ s.path |remove_first: "/" }}</a></li>
       {% endif %}
