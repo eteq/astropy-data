@@ -8,7 +8,7 @@
         "latitude": 51.477811,
         "elevation_unit": "meter",
         "longitude": -0.001475,
-        "timezone": "Greenwich",
+        "timezone": "Greenwich"
         "aliases": [
             "example_site"
         ]
